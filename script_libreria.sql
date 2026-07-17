@@ -31,3 +31,25 @@ GO
 
 DROP TABLE Tabla_Basura;
 GO
+
+-- 5. Insertando registros
+INSERT INTO Editoriales (nombre_editorial, pais_origen)
+VALUES 	('Penguin Random House', 'Estados Unidos'),
+	('Planeta', 'España');
+GO
+
+INSERT INTO Libros (titulo, precio, id_editorial, anio_publicacion)
+VALUES ('Cien años de soledad', 350.50, 1, 1967),
+('Don Quijote de la Mancha', 420.00, 2, 1605);
+GO
+
+-- 6. Actualizando registros
+UPDATE Libros
+SET precio = 300.00
+WHERE titulo = 'Cien años de soledad';
+GO
+
+-- 7. Eliminando registros específicos
+DELETE FROM Libros
+WHERE titulo = 'Don Quijote de la Mancha';
+GO
